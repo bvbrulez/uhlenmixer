@@ -5,142 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Monatliche Übersicht der erzeugten Energie des Balkonkraftwerks."
+      content="Uhlenmixer – die Feldhockey-Elternmannschaft des UHC Hamburg."
     />
-    <title>Balkonkraftwerk – Ertrag</title>
+    <title>Uhlenmixer | UHC Hamburg</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/components.css" />
   </head>
   <body>
-    <header>
-      <h1>Balkonkraftwerk</h1>
-      <p>Monatliche Übersicht der erzeugten Energie</p>
+    <header class="site-header">
+      <a class="brand" href="#start" aria-label="Uhlenmixer Startseite">
+        <span class="brand-mark" aria-hidden="true">UM</span>
+        <span>Uhlenmixer</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menü
+      </button>
+      <nav id="site-nav" aria-label="Hauptnavigation">
+        <a href="#team">Das Team</a>
+        <a href="#termine">Termine</a>
+        <a href="#dabei">Dabei sein</a>
+      </nav>
     </header>
 
-    <main>
-      <section id="auth-section" aria-labelledby="auth-heading">
-        <h2 id="auth-heading">Zugang</h2>
-        <form class="auth-form" id="auth-form" action="" method="post">
-          <label for="email">
-            E-Mail
-            <input id="email" name="email" type="email" autocomplete="username" required />
-          </label>
-          <label for="password">
-            Passwort
-            <input id="password" name="password" type="password" autocomplete="current-password" required />
-          </label>
-          <button type="submit">Anmelden</button>
-        </form>
-        <p id="auth-status" role="status" aria-live="polite"></p>
-      </section>
-
-      <section id="entry-section" aria-labelledby="entry-heading" hidden>
-        <h2 id="entry-heading">Kilowattstunden eintragen</h2>
-        <form id="energy-form">
-          <label for="month">
-            Monat
-            <select id="month" name="month" required>
-              <option value="1">Januar</option>
-              <option value="2">Februar</option>
-              <option value="3">März</option>
-              <option value="4">April</option>
-              <option value="5">Mai</option>
-              <option value="6">Juni</option>
-              <option value="7">Juli</option>
-              <option value="8">August</option>
-              <option value="9">September</option>
-              <option value="10">Oktober</option>
-              <option value="11">November</option>
-              <option value="12">Dezember</option>
-            </select>
-          </label>
-          <label for="year">
-            Jahr
-            <input id="year" name="year" type="number" min="2000" max="2100" required />
-          </label>
-          <label for="kilowatt-hours">
-            Ertrag (kWh)
-            <input
-              id="kilowatt-hours"
-              name="kilowatt-hours"
-              type="number"
-              min="0"
-              max="999.999"
-              step="0.001"
-              inputmode="decimal"
-              required
-            />
-          </label>
-          <button type="submit">Speichern</button>
-        </form>
-        <p class="status" id="status" role="status" aria-live="polite"></p>
-        <button id="logout-button" type="button" hidden>Abmelden</button>
-      </section>
-
-      <section aria-labelledby="overview-heading">
-        <h2 id="overview-heading">Monatsübersicht</h2>
-        <label for="display-year">
-          Angezeigtes Jahr
-          <select id="display-year"></select>
-        </label>
-        <div class="table-scroll">
-          <table>
-            <caption id="table-caption">Ertrag im Jahr</caption>
-            <thead>
-              <tr>
-                <th scope="col">Monat</th>
-                <th scope="col">Erreicht</th>
-              </tr>
-            </thead>
-            <tbody id="overview"></tbody>
-            <tfoot>
-              <tr>
-                <td>Jahressumme</td>
-                <td id="year-total">0,00 kWh</td>
-              </tr>
-            </tfoot>
-          </table>
+    <main id="start">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Feldhockey-Elternmannschaft · UHC Hamburg</p>
+          <h1>Wir spielen.<br /><em>Wir mixen.</em><br />Wir sind Uhlenmixer.</h1>
+          <p class="hero-text">
+            Eltern am Spielfeldrand, auf dem Platz und danach. Eine Mannschaft mit
+            Leidenschaft für Hockey, gute Pässe und noch bessere dritte Halbzeiten.
+          </p>
+          <a class="button button-light" href="#dabei">Mitmischen <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art" aria-label="Illustration eines Hockeyballs auf dem Spielfeld">
+          <div class="sun"></div>
+          <div class="field-lines"></div>
+          <div class="hockey-stick"></div>
+          <div class="hockey-ball"></div>
+          <span class="art-note">seit<br /><strong>2024</strong></span>
         </div>
       </section>
 
-      <section aria-labelledby="summary-heading">
-        <h2 id="summary-heading">Gesamtertrag</h2>
-        <div class="summary-grid">
-          <div class="summary-card summary-card-total">
-            <span class="summary-label">Gesamtwert aller Jahre</span>
-            <strong id="all-time-total">0,00 kWh</strong>
+      <section class="intro section-narrow" id="team">
+        <div>
+          <p class="eyebrow">Mehr als ein Elternabend</p>
+          <h2>Hockey verbindet<br /><span>Generationen.</span></h2>
+        </div>
+        <p>
+          Die Uhlenmixer sind die Elternmannschaft des UHC Hamburg. Wir treffen uns,
+          um gemeinsam Hockey zu spielen, voneinander zu lernen und den UHC-Spirit
+          weiterzutragen. Neue Gesichter sind jederzeit willkommen – egal, ob
+          Hockey-Veteran oder Quereinsteigerin.
+        </p>
+      </section>
+
+      <section class="stats section-narrow" aria-label="Uhlenmixer in Zahlen">
+        <div class="stat"><strong>1</strong><span>Team</span></div>
+        <div class="stat"><strong>11+</strong><span>Spieler:innen</span></div>
+        <div class="stat"><strong>100%</strong><span>Spaß am Spiel</span></div>
+        <div class="stat"><strong>0</strong><span>Ausreden</span></div>
+      </section>
+
+      <section class="schedule" id="termine">
+        <div class="section-heading section-narrow">
+          <div>
+            <p class="eyebrow">Auf dem Platz</p>
+            <h2>Unsere nächsten <span>Termine.</span></h2>
           </div>
-          <div class="summary-card summary-card-year">
-            <span class="summary-label">Aktuelles Jahr <span id="summary-year"></span></span>
-            <strong id="summary-year-total">0,00 kWh</strong>
-          </div>
-          <div class="summary-card summary-card-best">
-            <span class="summary-label">Bester Monat</span>
-            <strong id="best-month">Noch keine Daten</strong>
-          </div>
-          <div class="summary-card summary-card-worst">
-            <span class="summary-label">Schlechtester Monat</span>
-            <strong id="worst-month">Noch keine Daten</strong>
+          <p>Schläger einpacken, Schuhe schnüren, los geht’s.</p>
+        </div>
+        <div class="match-card section-narrow">
+          <div class="match-label">Nächstes Training</div>
+          <div class="match-main">
+            <div class="date"><strong>18</strong><span>SEP<br />2026</span></div>
+            <div>
+              <h3>Training am Uhlenhorst</h3>
+              <p>19:30 Uhr · Hockeyplatz 2 · Wesselblek 8, Hamburg</p>
+            </div>
+            <span class="match-badge">Dabei?</span>
           </div>
         </div>
-        <div class="table-scroll">
-          <table>
-            <caption>Ertrag je Jahr</caption>
-            <thead>
-              <tr>
-                <th scope="col">Jahr</th>
-                <th scope="col">Jahreswert</th>
-              </tr>
-            </thead>
-            <tbody id="annual-overview"></tbody>
-          </table>
+        <div class="event-list section-narrow">
+          <article class="event">
+            <time datetime="2026-09-25"><strong>25</strong><span>SEP</span></time>
+            <div><h3>Freundschaftsspiel</h3><p>19:00 Uhr · UHC Hamburg</p></div>
+            <span class="event-arrow" aria-hidden="true">→</span>
+          </article>
+          <article class="event">
+            <time datetime="2026-10-02"><strong>02</strong><span>OKT</span></time>
+            <div><h3>Uhlenmixer-Stammtisch</h3><p>Ab 20:30 Uhr · Vereinsheim</p></div>
+            <span class="event-arrow" aria-hidden="true">→</span>
+          </article>
         </div>
+      </section>
+
+      <section class="join section-narrow" id="dabei">
+        <div class="join-copy">
+          <p class="eyebrow">Lust auf Hockey?</p>
+          <h2>Komm vorbei.<br /><span>Mix mit.</span></h2>
+          <p>Du musst kein Profi sein. Schreib uns einfach, wenn du beim nächsten Training dabei sein möchtest.</p>
+          <a class="button button-dark" href="mailto:uhlenmixer@uhc.de">Kontakt aufnehmen <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="join-ball" aria-hidden="true">🏑</div>
       </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase-config.js"></script>
+    <footer>
+      <div class="section-narrow footer-inner">
+        <div><span class="brand-mark">UM</span><strong>Uhlenmixer</strong><p>Elternmannschaft des UHC Hamburg</p></div>
+        <div class="footer-links"><a href="https://www.uhc.de/" rel="noreferrer">Zum UHC Hamburg ↗</a><a href="#start">Nach oben ↑</a></div>
+      </div>
+    </footer>
     <script type="module" src="scripts/app.js"></script>
   </body>
 </html>
